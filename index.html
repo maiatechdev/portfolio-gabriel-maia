@@ -12,7 +12,12 @@
     </div>
     
     <nav class="navegacao">
-        <ul class="menu">
+        <div class="hamburguer" id="hamburguer">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <ul class="menu" id="menu">
             <li>
                 <a href="#Inicio" class="menu-link">Inicio</a>
             </li>
@@ -120,6 +125,22 @@
     </section>
 
     <script>
+        const hamburguer = document.getElementById('hamburguer');
+        const menu = document.getElementById('menu');
+        const links = document.querySelectorAll('.menu-link');
+
+        hamburguer.addEventListener('click', () => {
+            hamburguer.classList.toggle('ativo');
+            menu.classList.toggle('ativo');
+        });
+
+        links.forEach(link => {
+            link.addEventListener('click', () => {
+                hamburguer.classList.remove('ativo');
+                menu.classList.remove('ativo');
+            });
+        });
+
         function enviarMensagem(event) {
             event.preventDefault();
 
