@@ -335,3 +335,70 @@ h1 {
         transform: translateY(-20px);
     }
 }
+
+/* Responsividade para Dispositivos Móveis */
+@media (max-width: 768px) {
+    .navegacao {
+        padding: 1rem;
+    }
+
+    .menu {
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+
+    .menu-link {
+        font-size: 0.9rem;
+    }
+
+    .foto-perfil {
+        width: 250px;
+        height: 250px;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+        text-align: center;
+    }
+
+    .cabecalho-sub-titulo {
+        font-size: 1.1rem;
+        text-align: center;
+        padding: 0 1rem;
+    }
+
+    .sobre,
+    .atividades,
+    .projetos,
+    .contatos {
+        padding: 4rem 1.2rem;
+    }
+
+    .sobre-titulo,
+    .atividades-titulo,
+    .projetos-titulo,
+    .contato-titulo {
+        font-size: 2rem;
+        margin-bottom: 30px;
+    }
+
+    .sobre-caixa {
+        padding: 1.5rem;
+    }
+
+    .sobre-paragrafo {
+        font-size: 1rem;
+    }
+
+    .projetos-caixa {
+        grid-template-columns: 1fr;
+    }
+
+    .projeto-imagem {
+        height: 280px;
+    }
+
+    .formulario-contato {
+        padding: 1.5rem;
+    }
+}
