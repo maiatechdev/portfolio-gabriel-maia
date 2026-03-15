@@ -98,7 +98,10 @@
 
     <section id="Projetos" class="projetos">
         <h2 class="projetos-titulo">Top Projetos</h2>
-        <div class="projetos-caixa">
+        <div class="projetos-wrapper" style="position: relative; max-width: 1000px; margin: 0 auto;">
+            <button class="carrossel-btn prev" id="btn-prev">&#10094;</button>
+            <button class="carrossel-btn next" id="btn-next">&#10095;</button>
+            <div class="projetos-caixa" id="projetos-caixa">
 
             <div class="projetos-card">
                 <img src="/img/Captura de tela 2026-03-15 120643.png" alt="Projeto Atende+" class="projeto-imagem">
@@ -132,6 +135,7 @@
                 </div>
             </div>
 
+            </div>
         </div>
     </section>
 
@@ -179,6 +183,20 @@
             const url = `https://wa.me/${telefone}/?text=${msgFormatada}`;
             window.open(url, '_blank');
         }
+
+        const btnPrev = document.getElementById('btn-prev');
+        const btnNext = document.getElementById('btn-next');
+        const carousel = document.getElementById('projetos-caixa');
+
+        btnNext.addEventListener('click', () => {
+            const width = carousel.clientWidth;
+            carousel.scrollBy({ left: width, behavior: 'smooth' });
+        });
+
+        btnPrev.addEventListener('click', () => {
+            const width = carousel.clientWidth;
+            carousel.scrollBy({ left: -width, behavior: 'smooth' });
+        });
     </script>
 </body>
 </html>
