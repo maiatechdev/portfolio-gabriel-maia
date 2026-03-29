@@ -119,7 +119,7 @@ h1 {
 }
 
 .sobre-paragrafo {
-    text-align: center;
+    text-align: justify;
     font-size: 1.2rem;
 }
 
@@ -179,6 +179,7 @@ h1 {
 }
 
 .paragrafos-atividades {
+    text-align: justify;
     color: rgba(226, 232, 240, 0.8);
     line-height: 1.5rem;
 }
