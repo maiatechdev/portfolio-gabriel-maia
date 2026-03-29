@@ -616,7 +616,7 @@ section {
     }
 
     .anim-nome, h1 {
-        font-size: 2.5rem;
+        font-size: 1.8rem;
         text-align: center;
     }
 
@@ -670,7 +670,7 @@ section {
     .atividades-titulo,
     .projetos-titulo,
     .contato-titulo {
-        font-size: 2rem;
+        font-size: 1.5rem;
         margin-bottom: 30px;
     }
 
@@ -678,8 +678,11 @@ section {
         padding: 1.5rem;
     }
 
-    .sobre-paragrafo {
+    .sobre-paragrafo,
+    .paragrafos-atividades,
+    .paragrafos-projetos {
         font-size: 1rem;
+        text-align: left;
     }
 
     .projetos-caixa {
