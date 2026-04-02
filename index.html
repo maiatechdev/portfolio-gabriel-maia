@@ -19,21 +19,30 @@
         </div>
         <ul class="menu" id="menu">
             <li>
-                <a href="#Inicio" class="menu-link">Início</a>
+                <a href="#Inicio" class="menu-link" data-i18n="nav_home">Início</a>
             </li>
             <li>
-                <a href="#Sobre" class="menu-link">Sobre</a>
+                <a href="#Sobre" class="menu-link" data-i18n="nav_about">Sobre</a>
             </li>
             <li>
-                <a href="#Atividades" class="menu-link">Atividades e Competições</a>
+                <a href="#Atividades" class="menu-link" data-i18n="nav_activities">Atividades e Competições</a>
             </li>
             <li>
-                <a href="#Projetos" class="menu-link">Projetos</a>
+                <a href="#Projetos" class="menu-link" data-i18n="nav_projects">Projetos</a>
             </li>
             <li>
-                <a href="#Contato" class="menu-link">Contato</a>
+                <a href="#Contato" class="menu-link" data-i18n="nav_contact">Contato</a>
             </li>
         </ul>
+        <div class="idioma-seletor">
+            <button class="idioma-btn" id="idioma-atual">PT</button>
+            <div class="idioma-dropdown" id="idioma-lista">
+                <a href="#" onclick="mudarIdioma('pt')">Português</a>
+                <a href="#" onclick="mudarIdioma('en')">English</a>
+                <a href="#" onclick="mudarIdioma('it')">Italiano</a>
+                <a href="#" onclick="mudarIdioma('es')">Español</a>
+            </div>
+        </div>
     </nav>
     <main id="Inicio" class="cabecalho">
         <div class="perfil-container">
@@ -41,17 +50,17 @@
         </div>
         <h1 class="anim-nome">Gabriel Maia</h1>
         <p class="cabecalho-sub-titulo">
-            <span class="typing-text"></span><span class="cursor">&nbsp;</span>
+            <span class="typing-text" data-i18n="hero_role"></span><span class="cursor">&nbsp;</span>
         </p>
 
         <div class="botoes-hero">
-            <a href="#Projetos" class="btn-hero btn-primario">Ver Projetos</a>
+            <a href="#Projetos" class="btn-hero btn-primario" data-i18n="hero_projects_btn">Ver Projetos</a>
             
             <div class="dropdown-cv">
-                <button class="btn-hero btn-secundario" onclick="toggleDropdown(event)">Download Currículo</button>
+                <button class="btn-hero btn-secundario" onclick="toggleDropdown(event)" data-i18n="hero_cv_btn">Download Currículo</button>
                 <div class="dropdown-content" id="cv-dropdown">
-                    <a href="https://heyzine.com/flip-book/9916faaf84.html" target="_blank">Português</a>
-                    <a href="https://heyzine.com/flip-book/d1419be84b.html" target="_blank">English</a>
+                    <a href="https://heyzine.com/flip-book/9916faaf84.html" target="_blank" data-i18n="cv_pt">Português</a>
+                    <a href="https://heyzine.com/flip-book/d1419be84b.html" target="_blank" data-i18n="cv_en">English</a>
                 </div>
             </div>
         </div>
@@ -75,63 +84,72 @@
         </div>
     </main>
     <section id="Sobre" class="sobre">
-        <h2 class="sobre-titulo reveal">
+        <h2 class="sobre-titulo reveal" data-i18n="about_title">
             Sobre mim
         </h2>
         <div class="sobre-caixa reveal-left delay-100">
-            <p class="sobre-paragrafo">
+            <p class="sobre-paragrafo" data-i18n="about_text">
                 Sou desenvolvedor de software com foco em Front-End, com experiência no desenvolvimento de aplicações web modernas, responsivas e escaláveis utilizando JavaScript, TypeScript, Angular, React, HTML e CSS.
-
+<br><br>
                 Atualmente curso Análise e Desenvolvimento de Sistemas na Universidade Católica do Salvador e atuo no desenvolvimento de soluções digitais voltadas à otimização de processos e melhoria do acesso a serviços públicos.
-
+<br><br>
                 Tenho experiência na construção de sistemas web completos, integração com APIs REST, arquitetura baseada em componentes e utilização de metodologias ágeis como Scrum. Durante minha atuação profissional, participei do desenvolvimento de soluções que contribuíram para melhorar a organização de atendimentos públicos, reduzindo significativamente o tempo de espera dos usuários.
-
+<br><br>
                 Também participo de iniciativas acadêmicas e de formação em tecnologia, como o programa de desenvolvimento da Ford Motor Company (Ford Enter) e a LAMIT - Liga Acadêmica de Maratonas, Inovação e Tecnologia, onde atuo como Diretor de Comunicação e Marketing.
-
+<br><br>
                 Sou movido por aprendizado contínuo, resolução de problemas e desenvolvimento de soluções tecnológicas que gerem impacto real na vida das pessoas.
             </p>
         </div>
     </section>
     
     <section id="Atividades" class="atividades">
-        <h2 class="atividades-titulo reveal">Atividades e Competições</h2>
+        <h2 class="atividades-titulo reveal" data-i18n="activities_title">Atividades e Competições</h2>
         <div class="atividades-caixa">
+
             <div class="atividade-item reveal delay-100">
-                <img src="/img/Oxeanhub.JPG" alt="Competição" class="atividade-imagem">
+                <img src="/img/winnerHackathon-post.jpg" alt="Hackathon C4C" class="atividade-imagem">
                 <div class="atividade-texto">
-                    <h3 class="info-atividades">Hackathon Oxeanhub</h3>
-                    <p class="paragrafos-atividades">Participação em um hackathon promovido pelo OxeanHub, focado no desenvolvimento de soluções tecnológicas para problemas reais. Durante o evento, trabalhei em equipe utilizando metodologias ágeis para idealizar, planejar e desenvolver um protótipo funcional em um curto período de tempo. A experiência fortaleceu habilidades como trabalho em equipe, resolução de problemas, criatividade e desenvolvimento rápido de soluções, além de proporcionar contato com o ecossistema de inovação e empreendedorismo.</p>
+                    <h3 class="info-atividades" data-i18n="activity_c4c_title">Hackathon C4C by Eletric Sheep and Open Paws</h3>
+                    <p class="paragrafos-atividades" data-i18n="activity_c4c_text">Fui premiado em 1º lugar no Hackathon C4C by Eletric Sheep and Open Paws, uma competição de desenvolvimento de soluções tecnológicas para problemas reais. Desenvolvemos uma ferramenta de negócios com IA para auxiliar pequenas empresas na tomada de decisões estratégicas com os insights gerados pela nossa plataforma. A solução se destacou pelo uso de simulação de cenários, permitindo prever impactos de diferentes ações empresariais e apoiar planejamentos mais assertivos e orientados a resultados.</p>
+                </div>
+            </div>
+
+            <div class="atividade-item reveal delay-100">
+                <img src="/img/Oxeanhub.JPG" alt="Hackathon Oxeanhub" class="atividade-imagem">
+                <div class="atividade-texto">
+                    <h3 class="info-atividades" data-i18n="activity_oxeanhub_title">Hackathon Oxeanhub</h3>
+                    <p class="paragrafos-atividades" data-i18n="activity_oxeanhub_text">Participação em um hackathon promovido pelo OxeanHub, focado no desenvolvimento de soluções tecnológicas para problemas reais. Durante o evento, trabalhei em equipe utilizando metodologias ágeis para idealizar, planejar e desenvolver um protótipo funcional em um curto período de tempo. A experiência fortaleceu habilidades como trabalho em equipe, resolução de problemas, criatividade e desenvolvimento rápido de soluções, além de proporcionar contato com o ecossistema de inovação e empreendedorismo.</p>
                 </div>
             </div>
             
             <div class="atividade-item reveal delay-200">
                 <img src="/img/SesiSaude.jpg" alt="Hackathon SESI Saúde" class="atividade-imagem">
                 <div class="atividade-texto">
-                    <h3 class="info-atividades">Hackathon SESI Saúde</h3>
-                    <p class="paragrafos-atividades">Participação no Hackathon SESI Saúde, promovido pelo Serviço Social da Indústria (SESI), evento focado na criação de soluções tecnológicas voltadas para desafios dos usuarios da rede SESI. Durante a competição, trabalhei em equipe no desenvolvimento de ideias e protótipos digitais com potencial de impacto social, aplicando conhecimentos em tecnologia, inovação e resolução de problemas. A experiência proporcionou contato com desafios reais, estimulando pensamento crítico, criatividade e colaboração em ambientes de alta intensidade.</p>
+                    <h3 class="info-atividades" data-i18n="activity_sesi_title">Hackathon SESI Saúde</h3>
+                    <p class="paragrafos-atividades" data-i18n="activity_sesi_text">Participação no Hackathon SESI Saúde, promovido pelo Serviço Social da Indústria (SESI), evento focado na criação de soluções tecnológicas voltadas para desafios dos usuarios da rede SESI. Durante a competição, trabalhei em equipe no desenvolvimento de ideias e protótipos digitais com potencial de impacto social, aplicando conhecimentos em tecnologia, inovação e resolução de problemas. A experiência proporcionou contato com desafios reais, estimulando pensamento crítico, criatividade e colaboração em ambientes de alta intensidade.</p>
                 </div>
             </div>
             
             <div class="atividade-item reveal delay-300">
                 <img src="/img/OceanWeek4-23.jpg" alt="Diretor de Marketing da LAMIT" class="atividade-imagem">
                 <div class="atividade-texto">
-                    <h3 class="info-atividades">Diretoria de Marketing da LAMIT</h3>
-                    <p class="paragrafos-atividades">Atuação como Diretor de Comunicação e Marketing da LAMIT – Liga Acadêmica de Maratonas, Inovação e Tecnologia, sendo responsável pelo planejamento estratégico de comunicação, gestão das redes sociais e fortalecimento da presença institucional da liga. Entre as atividades realizadas estão a divulgação de eventos, hackathons e atividades acadêmicas, produção de conteúdo institucional e apoio na organização de iniciativas voltadas à inovação, tecnologia e programação competitiva.</p>
+                    <h3 class="info-atividades" data-i18n="activity_lamit_title">Diretoria de Marketing da LAMIT</h3>
+                    <p class="paragrafos-atividades" data-i18n="activity_lamit_text">Atuação como Diretor de Comunicação e Marketing da LAMIT – Liga Acadêmica de Maratonas, Inovação e Tecnologia, sendo responsável pelo planejamento estratégico de comunicação, gestão das redes sociais e fortalecimento da presença institucional da liga. Entre as atividades realizadas estão a divulgação de eventos, hackathons e atividades acadêmicas, produção de conteúdo institucional e apoio na organização de iniciativas voltadas à inovação, tecnologia e programação competitiva.</p>
                 </div>
             </div>
             
             <div class="atividade-item reveal delay-400">
                 <img src="/img/FordEnter.jpeg" alt="Liderança de Turma – Ford Enter" class="atividade-imagem">
                 <div class="atividade-texto">
-                    <h3 class="info-atividades">Liderança de Turma – Ford Enter</h3>
-                    <p class="paragrafos-atividades">Atuação como líder de turma no programa da Ford Enter, iniciativa da Ford Motor Company. Nesse papel, fui responsável por representar os participantes, facilitar a comunicação entre participantes e orientadores e apoiar a organização das atividades do programa. A experiência fortaleceu competências como liderança, comunicação, colaboração e gestão de equipe, além de contribuir para o desenvolvimento de um ambiente de aprendizagem mais integrado e participativo.</p>
+                    <h3 class="info-atividades" data-i18n="activity_ford_title">Liderança de Turma – Ford Enter</h3>
+                    <p class="paragrafos-atividades" data-i18n="activity_ford_text">Atuação como líder de turma no programa da Ford Enter, iniciativa da Ford Motor Company. Nesse papel, fui responsável por representar os participantes, facilitar a comunicação entre participantes e orientadores e apoiar a organização das atividades do programa. A experiência fortaleceu competências como liderança, comunicação, colaboração e gestão de equipe, além de contribuir para o desenvolvimento de um ambiente de aprendizagem mais integrado e participativo.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <section id="Projetos" class="projetos">
-        <h2 class="projetos-titulo reveal">Top Projetos</h2>
+        <h2 class="projetos-titulo reveal" data-i18n="projects_title">Top Projetos</h2>
         <div class="projetos-wrapper reveal delay-100">
             <button class="carrossel-btn prev" id="btn-prev">&#10094;</button>
             <button class="carrossel-btn next" id="btn-next">&#10095;</button>
@@ -141,7 +159,7 @@
                 <img src="/img/Captura de tela 2026-03-15 120643.png" alt="Projeto Atende+" class="projeto-imagem">
                 <div class="caixa-texo-projeto">
                     <h3 class="info-projetos">Atende+</h3>
-                    <p class="paragrafos-projetos">Sistema de controle de filas e agendamentos para atendimentos públicos.</p>
+                    <p class="paragrafos-projetos" data-i18n="project_atende_desc">Sistema de controle de filas e agendamentos para atendimentos públicos.</p>
                 </div>
             </div>
 
@@ -149,7 +167,7 @@
                 <img src="/img/helpdesk.png" alt="Projeto Helpdesk" class="projeto-imagem">
                 <div class="caixa-texo-projeto">
                     <h3 class="info-projetos">Helpdesk</h3>
-                    <p class="paragrafos-projetos">Sistema de gestão de chamados técnicos.</p>
+                    <p class="paragrafos-projetos" data-i18n="project_helpdesk_desc">Sistema de gestão de chamados técnicos.</p>
                 </div>
             </div>
 
@@ -157,7 +175,7 @@
                 <img src="/img/aiBusinessCopilot.jpeg" alt="Projeto AI Business Copilot" class="projeto-imagem">
                 <div class="caixa-texo-projeto">
                     <h3 class="info-projetos">AI Business Copilot</h3>
-                    <p class="paragrafos-projetos">Plataforma de IA para auxiliar na gestão de negócios - Projeto Vencedor do C4C Hackathon Brazil.</p>
+                    <p class="paragrafos-projetos" data-i18n="project_aicopilot_desc">Plataforma de IA para auxiliar na gestão de negócios - Projeto Vencedor do C4C Hackathon Brazil.</p>
                 </div>
             </div>
 
@@ -165,7 +183,7 @@
                 <img src="/img/agrysapiens.png" alt="Projeto AgrySapiens" class="projeto-imagem">
                 <div class="caixa-texo-projeto">
                     <h3 class="info-projetos">AgrySapiens</h3>
-                    <p class="paragrafos-projetos">Ecommerce de produtos agrícolas para uma empresa Italiana.</p>
+                    <p class="paragrafos-projetos" data-i18n="project_agrysapiens_desc">Ecommerce de produtos agrícolas para uma empresa Italiana.</p>
                 </div>
             </div>
 
@@ -173,7 +191,7 @@
                 <img src="/img/FosterSmile.png" alt="Projeto FosterSmile" class="projeto-imagem">
                 <div class="caixa-texo-projeto">
                     <h3 class="info-projetos">FosterSmile</h3>
-                    <p class="paragrafos-projetos">Landing Page para uma ONG Italiana de serviços comunitários.</p>
+                    <p class="paragrafos-projetos" data-i18n="project_fostersmile_desc">Landing Page para uma ONG Italiana de serviços comunitários.</p>
                 </div>
             </div>
 
@@ -182,15 +200,15 @@
     </section>
 
     <section id="Contato" class="contatos">
-        <h2 class="contato-titulo reveal">Entre em Contato</h2>
+        <h2 class="contato-titulo reveal" data-i18n="contact_title">Entre em Contato</h2>
         <form class="formulario-contato reveal delay-100" id="formulario" onsubmit="enviarMensagem(event)">
             <div class="grupo-form">
-                <input placeholder="Nome" class="campo-form" id="nome">
+                <input placeholder="Nome" class="campo-form" id="nome" data-i18n-placeholder="contact_name_placeholder">
             </div>
             <div class="grupo-form">
-                <textarea class="campo-form" placeholder="Digite sua Mensagem" id="mensagem" rows="6"></textarea>
+                <textarea class="campo-form" placeholder="Digite sua Mensagem" id="mensagem" rows="6" data-i18n-placeholder="contact_message_placeholder"></textarea>
             </div>
-            <button type="submit" class="botao-form">Enviar WhatsApp</button>
+            <button type="submit" class="botao-form" data-i18n="contact_submit_btn">Enviar WhatsApp</button>
         </form>
     </section>
 
@@ -211,6 +229,191 @@
             });
         });
 
+        // I18n Logic
+        const translations = {
+            pt: {
+                nav_home: "Início",
+                nav_about: "Sobre",
+                nav_activities: "Atividades e Competições",
+                nav_projects: "Projetos",
+                nav_contact: "Contato",
+                hero_role: "Software Engineer",
+                hero_projects_btn: "Ver Projetos",
+                hero_cv_btn: "Download Currículo",
+                cv_pt: "Português",
+                cv_en: "English",
+                about_title: "Sobre mim",
+                about_text: "Sou desenvolvedor de software com foco em Front-End, com experiência no desenvolvimento de aplicações web modernas, responsivas e escaláveis utilizando JavaScript, TypeScript, Angular, React, HTML e CSS.<br><br>Atualmente curso Análise e Desenvolvimento de Sistemas na Universidade Católica do Salvador e atuo no desenvolvimento de soluções digitais voltadas à otimização de processos e melhoria do acesso a serviços públicos.<br><br>Tenho experiência na construção de sistemas web completos, integração com APIs REST, arquitetura baseada em componentes e utilização de metodologias ágeis como Scrum. Durante minha atuação profissional, participei do desenvolvimento de soluções que contribuíram para melhorar a organização de atendimentos públicos, reduzindo significativamente o tempo de espera dos usuários.<br><br>Também participo de iniciativas acadêmicas e de formação em tecnologia, como o programa de desenvolvimento da Ford Motor Company (Ford Enter) e a LAMIT - Liga Acadêmica de Maratonas, Inovação e Tecnologia, onde atuo como Diretor de Comunicação e Marketing.<br><br>Sou movido por aprendizado contínuo, resolução de problemas e desenvolvimento de soluções tecnológicas que gerem impacto real na vida das pessoas.",
+                activities_title: "Atividades e Competições",
+                activity_c4c_title: "Hackathon C4C by Eletric Sheep and Open Paws",
+                activity_c4c_text: "Fui premiado em 1º lugar no Hackathon C4C by Eletric Sheep and Open Paws, uma competição de desenvolvimento de soluções tecnológicas para problemas reais. Desenvolvemos uma ferramenta de negócios com IA para auxiliar pequenas empresas na tomada de decisões estratégicas com os insights gerados pela nossa plataforma. A solução se destacou pelo uso de simulação de cenários, permitindo prever impactos de diferentes ações empresariais e apoiar planejamentos mais assertivos e orientados a resultados.",
+                activity_oxeanhub_title: "Hackathon Oxeanhub",
+                activity_oxeanhub_text: "Participação em um hackathon promovido pelo OxeanHub, focado no desenvolvimento de soluções tecnológicas para problemas reais. Durante o evento, trabalhei em equipe utilizando metodologias ágeis para idealizar, planejar e desenvolver um protótipo funcional em um curto período de tempo. A experiência fortaleceu habilidades como trabalho em equipe, resolução de problemas, criatividade e desenvolvimento rápido de soluções, além de proporcionar contato com o ecossistema de inovação e empreendedorismo.",
+                activity_sesi_title: "Hackathon SESI Saúde",
+                activity_sesi_text: "Participação no Hackathon SESI Saúde, promovido pelo Serviço Social da Indústria (SESI), evento focado na criação de soluções tecnológicas voltadas para desafios dos usuarios da rede SESI. Durante a competição, trabalhei em equipe no desenvolvimento de ideias e protótipos digitais com potencial de impacto social, aplicando conhecimentos em tecnologia, inovação e resolução de problemas. A experiência proporcionou contato com desafios reais, estimulando pensamento crítico, criatividade e colaboração em ambientes de alta intensidade.",
+                activity_lamit_title: "Diretoria de Marketing da LAMIT",
+                activity_lamit_text: "Atuação como Diretor de Comunicação e Marketing da LAMIT – Liga Acadêmica de Maratonas, Inovação e Tecnologia, sendo responsável pelo planejamento estratégico de comunicação, gestão das redes sociais e fortalecimento da presença institucional da liga. Entre as atividades realizadas estão a divulgação de eventos, hackathons e atividades acadêmicas, produção de conteúdo institucional e apoio na organização de iniciativas voltadas à inovação, tecnologia e programação competitiva.",
+                activity_ford_title: "Liderança de Turma – Ford Enter",
+                activity_ford_text: "Atuação como líder de turma no programa da Ford Enter, iniciativa da Ford Motor Company. Nesse papel, fui responsável por representar os participantes, facilitar a comunicação entre participantes e orientadores e apoiar a organização das atividades do programa. A experiência fortaleceu competências como liderança, comunicação, colaboração e gestão de equipe, além de contribuir para o desenvolvimento de um ambiente de aprendizagem mais integrado e participativo.",
+                projects_title: "Top Projetos",
+                project_atende_desc: "Sistema de controle de filas e agendamentos para atendimentos públicos.",
+                project_helpdesk_desc: "Sistema de gestão de chamados técnicos.",
+                project_aicopilot_desc: "Plataforma de IA para auxiliar na gestão de negócios - Projeto Vencedor do C4C Hackathon Brazil.",
+                project_agrysapiens_desc: "Ecommerce de produtos agrícolas para uma empresa Italiana.",
+                project_fostersmile_desc: "Landing Page para uma ONG Italiana de serviços comunitários.",
+                contact_title: "Entre em Contato",
+                contact_name_placeholder: "Nome",
+                contact_message_placeholder: "Digite sua Mensagem",
+                contact_submit_btn: "Enviar WhatsApp"
+            },
+            en: {
+                nav_home: "Home",
+                nav_about: "About",
+                nav_activities: "Activities",
+                nav_projects: "Projects",
+                nav_contact: "Contact",
+                hero_role: "Software Engineer",
+                hero_projects_btn: "View Projects",
+                hero_cv_btn: "Download CV",
+                cv_pt: "Portuguese",
+                cv_en: "English",
+                about_title: "About me",
+                about_text: "I am a software developer with a focus on Front-End, with experience in developing modern, responsive, and scalable web applications using JavaScript, TypeScript, Angular, React, HTML, and CSS.<br><br>I am currently studying Systems Analysis and Development at the Catholic University of Salvador and I work in the development of digital solutions aimed at process optimization and improvement of access to public services.<br><br>I have experience in building full web systems, integration with REST APIs, component-based architecture, and using agile methodologies like Scrum. During my professional career, I participated in the development of solutions that contributed to improving the organization of public services, significantly reducing the waiting time for users.<br><br>I also participate in academic initiatives and technology training, such as the Ford Motor Company development program (Ford Enter) and LAMIT - Academic League of Marathons, Innovation, and Technology, where I serve as Communication and Marketing Director.<br><br>I am driven by continuous learning, problem solving, and the development of technological solutions that generate real impact on people's lives.",
+                activities_title: "Activities and Competitions",
+                activity_c4c_title: "Hackathon C4C by Electric Sheep and Open Paws",
+                activity_c4c_text: "I was awarded 1st place in Hackathon C4C by Electric Sheep and Open Paws, a competition to develop technological solutions for real-world problems. We developed an AI business tool to help small businesses make strategic decisions with insights generated by our platform. The solution stood out for its use of scenario simulation, allowing for the prediction of impacts of different business actions and supporting more assertive and results-oriented planning.",
+                activity_oxeanhub_title: "Hackathon Oxeanhub",
+                activity_oxeanhub_text: "Participation in a hackathon promoted by OxeanHub, focused on developing technological solutions for real problems. During the event, I worked in a team using agile methodologies to idealize, plan, and develop a functional prototype in a short period of time. The experience strengthened skills such as teamwork, problem solving, creativity, and rapid solution development, as well as providing contact with the innovation and entrepreneurship ecosystem.",
+                activity_sesi_title: "Hackathon SESI Health",
+                activity_sesi_text: "Participation in the SESI Health Hackathon, promoted by the Social Service of Industry (SESI), an event focused on creating technological solutions aimed at challenges faced by SESI network users. During the competition, I worked in a team developing ideas and digital prototypes with social impact potential, applying knowledge in technology, innovation, and problem solving. The experience provided contact with real challenges, stimulating critical thinking, creativity, and collaboration in high-intensity environments.",
+                activity_lamit_title: "LAMIT Marketing Director",
+                activity_lamit_text: "Acting as Director of Communication and Marketing for LAMIT – Academic League of Marathons, Innovation, and Technology, responsible for strategic communication planning, social media management, and strengthening the league's institutional presence. Activities included promoting events, hackathons, and academic activities, producing institutional content, and supporting the organization of initiatives focused on innovation, technology, and competitive programming.",
+                activity_ford_title: "Class Leadership – Ford Enter",
+                activity_ford_text: "Acting as a class leader in the Ford Enter program, an initiative from Ford Motor Company. In this role, I was responsible for representing the participants, facilitating communication between participants and advisors, and supporting the organization of the program's activities. The experience strengthened competencies such as leadership, communication, collaboration, and team management, as well as contributing to the development of a more integrated and participative learning environment.",
+                projects_title: "Top Projects",
+                project_atende_desc: "Queue control and scheduling system for public services.",
+                project_helpdesk_desc: "Technical ticket management system.",
+                project_aicopilot_desc: "AI platform to assist in business management - Winning Project of C4C Hackathon Brazil.",
+                project_agrysapiens_desc: "Ecommerce of agricultural products for an Italian company.",
+                project_fostersmile_desc: "Landing Page for an Italian community services NGO.",
+                contact_title: "Get in Touch",
+                contact_name_placeholder: "Name",
+                contact_message_placeholder: "Type your message",
+                contact_submit_btn: "Send WhatsApp"
+            },
+            it: {
+                nav_home: "Inizio",
+                nav_about: "Chi sono",
+                nav_activities: "Attività",
+                nav_projects: "Progetti",
+                nav_contact: "Contatto",
+                hero_role: "Software Engineer",
+                hero_projects_btn: "Vedi Progetti",
+                hero_cv_btn: "Scarica CV",
+                cv_pt: "Portoghese",
+                cv_en: "Inglese",
+                about_title: "Chi sono",
+                about_text: "Sono uno sviluppatore software specializzato in Front-End, con esperienza nello sviluppo di applicazioni web moderne, reattive e scalabili utilizzando JavaScript, TypeScript, Angular, React, HTML e CSS.<br><br>Attualmente studio Analisi e Sviluppo di Sistemi presso l'Università Cattolica di Salvador e lavoro nello sviluppo di soluzioni digitali volte all'ottimizzazione dei processi e al miglioramento dell'accesso ai servizi pubblici.<br><br>Ho esperienza nella realizzazione di sistemi web completi, integrazione con API REST, architettura basata su componenti e utilizzo di metodologie agili come Scrum. Durante la mia carriera professionale, ho partecipato allo sviluppo di soluzioni che hanno contribuito a migliorare l'organizzazione dei servizi pubblici, riducendo significativamente i tempi di attesa per gli utenti.<br><br>Partecipo anche a iniziative accademiche e formazione tecnologica, come il programma di sviluppo della Ford Motor Company (Ford Enter) e la LAMIT - Lega Accademica di Maratone, Innovazione e Tecnologia, dove ricopro il ruolo di Direttore Comunicazione e Marketing.<br><br>Sono guidato dall'apprendimento continuo, dalla risoluzione dei problemi e dallo sviluppo di soluzioni tecnologiche che generano un impatto reale sulla vita delle persone.",
+                activities_title: "Attività e Competizioni",
+                activity_c4c_title: "Hackathon C4C by Electric Sheep and Open Paws",
+                activity_c4c_text: "Ho vinto il 1° posto all'Hackathon C4C di Electric Sheep e Open Paws, una competizione per sviluppare soluzioni tecnologiche per problemi reali. Abbiamo sviluppato uno strumento aziendale AI per aiutare le piccole imprese a prendere decisioni strategiche con gli approfondimenti generati dalla nostra piattaforma. La soluzione si è distinta per l'uso della simulazione di scenari, che ha permesso di prevedere l'impatto di diverse azioni aziendali e di supportare una pianificazione più assertiva e orientata ai risultati.",
+                activity_oxeanhub_title: "Hackathon Oxeanhub",
+                activity_oxeanhub_text: "Partecipazione a un hackathon promosso da OxeanHub, focalizzato sullo sviluppo di soluzioni tecnologiche per problemi reali. Durante l'evento, ho lavorato in un team utilizzando metodologie agili per ideare, pianificare e sviluppare un prototipo funzionale in un breve periodo di tempo. L'esperienza ha rafforzato competenze come il lavoro di squadra, la risoluzione di problemi, la creatività e lo sviluppo rapido di soluzioni, oltre a fornire contatti con l'ecosistema dell'innovazione e dell'imprenditorialità.",
+                activity_sesi_title: "Hackathon SESI Salute",
+                activity_sesi_text: "Partecipazione all'Hackathon SESI Salute, promosso dal Servizio Sociale dell'Industria (SESI), un evento focalizzato sulla creazione di soluzioni tecnologiche volte alle sfide affrontate dagli utenti della rete SESI. Durante il concorso, ho lavorato in un team sviluppando idee e prototipi digitali con potenziale di impatto sociale, applicando conoscenze in tecnologia, innovazione e risoluzione di problemi. L'esperienza ha fornito contatti con sfide reali, stimolando il pensiero critico, la creatività e la collaborazione in ambienti ad alta intensità.",
+                activity_lamit_title: "Direttore Marketing LAMIT",
+                activity_lamit_text: "Ricopro il ruolo di Direttore della Comunicazione e del Marketing per LAMIT – Lega Accademica di Maratone, Innovazione e Tecnologia, responsabile della pianificazione strategica della comunicazione, della gestione dei social media e del rafforzamento della presenza istituzionale della lega. Le attività comprendevano la promozione di eventi, hackathon e attività accademiche, la produzione di contenuti istituzionali e il supporto all'organizzazione di iniziative focalizzate sull'innovazione, la tecnologia e la programmazione competitiva.",
+                activity_ford_title: "Leadership di Classe – Ford Enter",
+                activity_ford_text: "Ha agito come capoclasse nel programma Ford Enter, un'iniziativa della Ford Motor Company. In questo ruolo, ero responsabile della rappresentanza dei partecipanti, facilitando la comunicazione tra partecipanti e consulenti e supportando l'organizzazione delle attività del programma. L'esperienza ha rafforzato competenze come leadership, comunicazione, collaborazione e gestione del team, oltre a contribuire allo sviluppo di un ambiente di apprendimento più integrato e partecipativo.",
+                projects_title: "Top Progetti",
+                project_atende_desc: "Sistema di controllo delle code e programmazione per i servizi pubblici.",
+                project_helpdesk_desc: "Sistema di gestione dei ticket tecnici.",
+                project_aicopilot_desc: "Piattaforma AI per assistere nella gestione aziendale - Progetto vincitore del C4C Hackathon Brazil.",
+                project_agrysapiens_desc: "Ecommerce di prodotti agricoli per un'azienda italiana.",
+                project_fostersmile_desc: "Landing Page per una ONG italiana di servizi comunitari.",
+                contact_title: "Contattami",
+                contact_name_placeholder: "Nome",
+                contact_message_placeholder: "Scrivi il tuo messaggio",
+                contact_submit_btn: "Invia WhatsApp"
+            },
+            es: {
+                nav_home: "Inicio",
+                nav_about: "Sobre mí",
+                nav_activities: "Actividades",
+                nav_projects: "Proyectos",
+                nav_contact: "Contacto",
+                hero_role: "Software Engineer",
+                hero_projects_btn: "Ver Proyectos",
+                hero_cv_btn: "Descargar CV",
+                cv_pt: "Portugués",
+                cv_en: "Inglés",
+                about_title: "Sobre mí",
+                about_text: "Soy desarrollador de software con enfoque en Front-End, con experiencia en el desarrollo de aplicaciones web modernas, responsivas y escalables utilizando JavaScript, TypeScript, Angular, React, HTML y CSS.<br><br>Actualmente curso Análisis y Desarrollo de Sistemas en la Universidad Católica del Salvador y trabajo en el desarrollo de soluciones digitales orientadas a la optimización de procesos y mejora del acceso a servicios públicos.<br><br>Tengo experiencia en la construcción de sistemas web completos, integración con APIs REST, arquitectura basada en componentes y utilización de metodologías ágiles como Scrum. Durante mi carrera profesional, participé en el desarrollo de soluciones que contribuyeron a mejorar la organización de los servicios públicos, reduciendo significativamente el tiempo de espera de los usuarios.<br><br>También participo en iniciativas académicas y formación en tecnología, como el programa de desarrollo de Ford Motor Company (Ford Enter) y la LAMIT - Liga Académica de Maratones, Innovación y Tecnología, donde me desempeño como Director de Comunicación y Marketing.<br><br>Me motiva el aprendizaje continuo, la resolución de problemas y el desarrollo de soluciones tecnológicas que generen un impacto real en la vida de las personas.",
+                activities_title: "Actividades y Competiciones",
+                activity_c4c_title: "Hackathon C4C by Electric Sheep and Open Paws",
+                activity_c4c_text: "Fui galardonado con el 1er lugar en el Hackathon C4C de Electric Sheep y Open Paws, una competencia para desarrollar soluciones tecnológicas para problemas del mundo real. Desarrollamos una herramienta comercial de IA para ayudar a las pequeñas empresas a tomar decisiones estratégicas con información generada por nuestra plataforma. La solución se destacó por el uso de simulación de escenarios, lo que permitió predecir impactos de diferentes acciones comerciales y apoyar una planificación más asertiva y orientada a resultados.",
+                activity_oxeanhub_title: "Hackathon Oxeanhub",
+                activity_oxeanhub_text: "Participación en un hackathon promovido por OxeanHub, enfocado en desarrollar soluciones tecnológicas para problemas reales. Durante el evento, trabajé en equipo utilizando metodologías ágiles para idealizar, planificar y desarrollar un prototipo funcional en un corto período de tiempo. La experiencia fortaleció habilidades como el trabajo en equipo, la resolución de problemas, la creatividad y el desarrollo rápido de soluciones, además de brindar contacto con el ecosistema de innovación y emprendimiento.",
+                activity_sesi_title: "Hackathon SESI Salud",
+                activity_sesi_text: "Participación en el Hackathon SESI Salud, promovido por el Servicio Social de la Industria (SESI), un evento enfocado en crear soluciones tecnológicas orientadas a desafíos que enfrentan los usuarios de la red SESI. Durante la competencia, trabajé en equipo desarrollando ideas y prototipos digitales con potencial de impacto social, aplicando conocimientos en tecnología, innovación y resolución de problemas. La experiencia proporcionó contacto con desafíos reales, estimulando el pensamiento crítico, la creatividad y la colaboración en entornos de alta intensidad.",
+                activity_lamit_title: "Director de Marketing LAMIT",
+                activity_lamit_text: "Actuando como Director de Comunicación y Marketing de LAMIT – Liga Académica de Maratones, Innovación y Tecnología, responsable de la planificación estratégica de comunicación, gestión de redes sociales y fortalecimiento de la presencia institucional de la liga. Las actividades incluyeron la promoción de eventos, hackathons y actividades académicas, la producción de contenido institucional y el apoyo a la organización de iniciativas centradas en la innovación, la tecnología y la programación competitiva.",
+                activity_ford_title: "Liderazgo de Clase – Ford Enter",
+                activity_ford_text: "Actuó como líder de clase en el programa Ford Enter, una iniciativa de Ford Motor Company. En este cargo, fui responsable de representar a los participantes, facilitar la comunicación entre los participantes y asesores, y apoyar la organización de las actividades del programa. La experiencia fortaleció competencias como el liderazgo, la comunicación, la colaboración y la gestión de equipos, además de contribuir al desarrollo de un entorno de aprendizaje más integrado y participativo.",
+                projects_title: "Top Proyectos",
+                project_atende_desc: "Sistema de control de colas y programación para servicios públicos.",
+                project_helpdesk_desc: "Sistema de gestión de tickets técnicos.",
+                project_aicopilot_desc: "Plataforma de IA para asistir en la gestión empresarial - Proyecto Ganador del Hackathon C4C Brasil.",
+                project_agrysapiens_desc: "Ecommerce de productos agrícolas para una empresa italiana.",
+                project_fostersmile_desc: "Landing Page para una ONG italiana de servicios comunitarios.",
+                contact_title: "Entre en Contacto",
+                contact_name_placeholder: "Nombre",
+                contact_message_placeholder: "Escribe tu mensaje",
+                contact_submit_btn: "Enviar WhatsApp"
+            }
+        };
+
+        let currentLang = localStorage.getItem('idioma') || 'pt';
+
+        function setLanguage(lang) {
+            currentLang = lang;
+            localStorage.setItem('idioma', lang);
+            document.getElementById('idioma-atual').textContent = lang.toUpperCase();
+            
+            const elements = document.querySelectorAll('[data-i18n]');
+            elements.forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (translations[lang][key]) {
+                    el.innerHTML = translations[lang][key];
+                }
+            });
+
+            const placeholders = document.querySelectorAll('[data-i18n-placeholder]');
+            placeholders.forEach(el => {
+                const key = el.getAttribute('data-i18n-placeholder');
+                if (translations[lang][key]) {
+                    el.placeholder = translations[lang][key];
+                }
+            });
+
+            // Update typing animation text if needed
+            // The typing animation uses textToType which is set globally.
+            // We should restart it or update it.
+            updateTypingText(lang);
+        }
+
+        function mudarIdioma(lang) {
+            setLanguage(lang);
+            const dropdown = document.getElementById('idioma-lista');
+            dropdown.classList.remove('show');
+        }
+
+        // Language Dropdown Toggle
+        document.getElementById('idioma-atual').addEventListener('click', (e) => {
+            e.stopPropagation();
+            document.getElementById('idioma-lista').classList.toggle('show');
+        });
+
         function enviarMensagem(event) {
             event.preventDefault();
 
@@ -219,8 +422,11 @@
             const mensagem = document.getElementById('mensagem').value;
             const telefone = '5571983031580';
 
-            const texto = `Olá! Me chamo ${nome}, ${mensagem}`;
-            const msgFormatada = encodeURIComponent(texto);
+            const textoPt = `Olá! Me chamo ${nome}, ${mensagem}`;
+            const textoEn = `Hello! My name is ${nome}, ${mensagem}`;
+            const msg = currentLang === 'pt' ? textoPt : textoEn;
+            
+            const msgFormatada = encodeURIComponent(msg);
 
             const url = `https://wa.me/${telefone}/?text=${msgFormatada}`;
             window.open(url, '_blank');
@@ -240,10 +446,11 @@
             carousel.scrollBy({ left: -width, behavior: 'smooth' });
         });
 
-        const textToType = "Software Engineer";
+        let textToType = translations[currentLang].hero_role;
         let charIndex = 0;
         const typingText = document.querySelector('.typing-text');
         const typingspeed = 100;
+        let typingTimeout;
 
         function type() {
             if (!typingText) return;
@@ -252,11 +459,20 @@
             charIndex++;
 
             if (charIndex < textToType.length) {
-                setTimeout(type, typingspeed);
+                typingTimeout = setTimeout(type, typingspeed);
             }
         }
 
+        function updateTypingText(lang) {
+            clearTimeout(typingTimeout);
+            textToType = translations[lang].hero_role;
+            charIndex = 0;
+            if (typingText) typingText.textContent = '';
+            type();
+        }
+
         document.addEventListener('DOMContentLoaded', () => {
+            setLanguage(currentLang);
             setTimeout(type, 1000);
         });
 
@@ -267,13 +483,17 @@
         }
 
         window.onclick = function(event) {
-            if (!event.target.matches('.btn-secundario')) {
+            if (!event.target.matches('.btn-secundario') && !event.target.matches('.idioma-btn')) {
                 var dropdowns = document.getElementsByClassName("dropdown-content");
                 for (var i = 0; i < dropdowns.length; i++) {
                     var openDropdown = dropdowns[i];
                     if (openDropdown.classList.contains('show')) {
                         openDropdown.classList.remove('show');
                     }
+                }
+                var idiomalista = document.getElementById('idioma-lista');
+                if (idiomalista.classList.contains('show')) {
+                    idiomalista.classList.remove('show');
                 }
             }
         }

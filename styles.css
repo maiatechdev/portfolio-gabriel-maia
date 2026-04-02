@@ -34,7 +34,70 @@ section {
     z-index: 100;
     top: 0;
     padding: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
+
+.idioma-seletor {
+    position: relative;
+    margin-left: 2rem;
+}
+
+.idioma-btn {
+    background: var(--vidro);
+    color: var(--claro);
+    border: 1px solid var(--vidro);
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+}
+
+.idioma-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: var(--primaria);
+}
+
+.idioma-dropdown {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    top: 120%;
+    right: 0;
+    background: rgba(15, 23, 42, 0.95);
+    min-width: 120px;
+    border: 1px solid var(--vidro);
+    border-radius: 8px;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+    transform: translateY(-10px);
+    z-index: 1000;
+}
+
+.idioma-dropdown.show {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.idioma-dropdown a {
+    color: var(--claro);
+    padding: 10px 15px;
+    text-decoration: none;
+    display: block;
+    font-size: 0.9rem;
+    transition: background 0.3s;
+}
+
+.idioma-dropdown a:hover {
+    background: rgba(79, 70, 229, 0.2);
+}
+
+.idioma-dropdown a:first-child { border-radius: 8px 8px 0 0; }
+.idioma-dropdown a:last-child { border-radius: 0 0 8px 8px; }
 
 .menu {
     display: flex;
@@ -564,9 +627,16 @@ section {
 
 @media (max-width: 768px) {
     .navegacao {
-        padding: 1.5rem 2rem;
+        padding: 1rem 2rem;
         display: flex;
         justify-content: flex-end;
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    .idioma-seletor {
+        margin-left: 0;
+        z-index: 102;
     }
 
     .hamburguer {
